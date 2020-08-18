@@ -7,6 +7,7 @@ namespace SimpleAPI.Tests
 {
     public class UnitTest1
     {
+        
         SimpleAPI.Controllers.WeatherForecastController Weather1 =new WeatherForecastController();
         [Fact]
         public void Test1()
