@@ -17,10 +17,9 @@ namespace SimpleAPI.Tests
          [Fact]
         public void GetWeatherData()
         {
-            
-            var returnValue = Weather1.Get();
-
-             Assert.Equal("Ahmed Shabana" ,returnValue.ToString());
+            System.Collections.Generic.IEnumerable<WeatherForecast> e = Weather1.Get();
+           
+             Assert.Equal("Hot" ,e.GetEnumerator().Current.Summary.ToString());
 
 
 
