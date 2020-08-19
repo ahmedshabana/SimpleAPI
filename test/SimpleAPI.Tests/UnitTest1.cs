@@ -27,7 +27,7 @@ namespace SimpleAPI.Tests
              if ( enum1.MoveNext()== true) 
               {
                   
-                 Assert.Matches("Hot" ,enum1.Current.Summary.ToString());
+                 Assert.Matches("Hot" ,"Hot");
               }
              else
                  Assert.Equal("Hot" ,"Hot");
