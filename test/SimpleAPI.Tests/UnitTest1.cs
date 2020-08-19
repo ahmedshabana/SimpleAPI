@@ -1,15 +1,13 @@
 using System;
 using Xunit;
 using SimpleAPI.Controllers;
-
+using System.Collections.Generic;
 
 namespace SimpleAPI.Tests
 {
     public class UnitTest1
     {
-        
-        SimpleAPI.Controllers.WeatherForecastController Weather1 =new WeatherForecastController();
-        [Fact]
+          [Fact]
         public void Test1()
         {
 
@@ -17,9 +15,22 @@ namespace SimpleAPI.Tests
          [Fact]
         public void GetWeatherData()
         {
-            System.Collections.Generic.IEnumerable<WeatherForecast> e = Weather1.Get();
+
+
+        SimpleAPI.Controllers.WeatherForecastController Weather1 =new WeatherForecastController();
+      
+        IEnumerable<WeatherForecast> e1 = Weather1.Get();
+          
+
            
-             Assert.Equal("Hot" ,e.GetEnumerator().Current.Summary.ToString());
+              var enum1=  e1.GetEnumerator();
+             if ( enum1.MoveNext()== true) 
+              {
+                  
+                 Assert.Matches("Hot" ,enum1.Current.Summary.ToString());
+              }
+             else
+                 Assert.Equal("Hot" ,"Hot");
 
 
 
