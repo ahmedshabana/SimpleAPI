@@ -28,9 +28,10 @@ namespace SimpleAPI.Tests
               {
                   
                  Assert.Matches("Hot" ,"Hot");
-                 
+
               }
              else
+             
                  Assert.Equal("Hot" ,"Hot");
 
 
